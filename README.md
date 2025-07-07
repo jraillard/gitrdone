@@ -1,6 +1,6 @@
 # Description
 
-`GitRDone` is a hands-on course to get you up to speed with version control using Git — the essential step before jumping into DevOps [initiation course](https://github.com/jraillard/parkndeploy).
+`GitRDone` is a hands-on course to get you up to speed with version control using Git — the essential step before jumping into [DevOps initiation course](https://github.com/jraillard/parkndeploy).
 
 Learn the fundamentals : what version control is, how Git works (commits, branches, merges), collaboration workflows, and key advanced commands.
 
