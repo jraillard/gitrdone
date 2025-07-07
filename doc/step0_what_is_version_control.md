@@ -10,6 +10,8 @@ Many tools and methodologies have been created throughout the years to handle th
 
 `Git` is the standard tool nowadays that's why we more often use this term instead of `version control` or `code source control`.
 
+Second thing : `version control is not always about code base`. We can use Git and other alternatives to version documentation or even binary files. Version control isn't bound to IT development but as it allows us to easily version text files, it's an awesome tool for us.
+
 ## Version control objectives
 
 As the name implies, version control allows developpers to do `file versionning` (instead of having multiples different copies of it :dizzy_face:).
@@ -60,11 +62,12 @@ Unlike centralized systems such as SVN or CVS, where all developers work on a si
 
 Git also introduced efficient handling of branching and merging, making parallel development smoother and less error-prone compared to earlier tools.
 
-Linus developed Git with simplicity in mind, focusing on a few basic commands (`git merge`, `git blame`, `git log`, `git commit`, and `git pull`) and primarily managing saving folders and files along with basic graph management.
+Linus developed Git with simplicity in mind, focusing on a few basic commands (`git merge`, `git blame`, `git log`, `git commit`, and `git pull`) and primarily managing saving directories and files along with basic graph management.
 
 Since these day Git has grown in popularity and became the `version control tool standard`.
 
 ## Time to Peek Inside Git
+
 Now that you understand what version control is and why it’s essential in IT development, it’s time to get your hands dirty with Git itself.
 
 In the next step, you’ll create your first local Git repository and peek inside to see how Git organizes and tracks your work behind the scenes.
