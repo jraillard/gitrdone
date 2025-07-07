@@ -17,6 +17,7 @@ Let’s **Git done right** and get ready for what’s next! 🚀
 - [Git](https://git-scm.com/downloads) obviously
 - [Fork](https://git-fork.com/) - The best Git GUI ever made
 - A GitHub account in order to fork this repo and start to work 😉
+- [Visual Studio Code](https://code.visualstudio.com/download) - Our IDE for this course
 
 ## Knowledges
 

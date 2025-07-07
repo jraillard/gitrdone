@@ -30,7 +30,7 @@ There two major version control types : `centralized` and `distributed`.
 
 ### Centralized
 
-![Centralized version control](../assets/centralized-vc.png)
+![Centralized version control](../assets/centralized_vc.png)
 
 As the name implies, it consist of having only one repository where every developpers can interact with simulatenously.
 
@@ -40,7 +40,7 @@ Therefore two developpers cannot work at the same time on a single file : that r
 
 ### Distributed
 
-![Distributed version control](../assets/distributed-vc.png)
+![Distributed version control](../assets/distributed_vc.png)
 
 Distributed method resolve this locking issue by providing : 
 - a remote repository 
