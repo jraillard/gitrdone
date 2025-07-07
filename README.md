@@ -26,8 +26,14 @@ Version control is heart of the computer scienctist's work and therefore could b
 
 # Let's dive-In !
 
-Version control is the barebone of IT development. We’ll start by understanding why it’s essential and how Git works under the hood.
+Version control is the barebone of IT development. Start by understanding why it’s essential and how Git works under the hood.
 
-Step-by-step, you’ll learn the key commands and concepts to track your code like a pro — all set to rock the DevOps world next.
+Jump right into the [first step](./doc/step0_what_is_version_control.md).
 
-Let’s **Git done right**! :rocket:
+Step-by-step, you’ll master Git basics to Git done right and be ready for DevOps.
+
+# Additionnal resources
+
+First of all, I hope this initiation would help you understand how to use version control in your day-to-day work.
+
+Now for a treasure trove of additional resources to dive deeper into DevOps concepts, check out the [to go further section](./doc/to_go_further.md). 👀
