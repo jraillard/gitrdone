@@ -2,7 +2,7 @@
 
 In this step, you’ll create your first local Git repository and explore what’s happening behind the scenes. 
 
-We’ll look inside the .git directory, understand Git’s internal objects like SHA-1 hashes and trees, and demystify Git’s staging areas : working directory, staging area, and repository.
+We’ll look inside the **.git directory**, understand Git’s internal objects like SHA-1 hashes and trees, and demystify Git’s staging areas : working directory, staging area, and repository.
 
 ## First repository
 
@@ -20,7 +20,7 @@ But wait we don't see anything in there :question:
 
 &rarr; Make sure you **allow hidden directory to be displayed**.
 
-After you should see a `.git directory` appears.
+Now you should see a `.git directory` appears.
 
 Before diving into what it contains we should understand how Git is working under the hood.
 
@@ -73,37 +73,38 @@ Each repository contains a `config file`. It is responsible to store repository 
 
 :bulb: This means there's a default one, on windows it is stored here : `C:\Users\<YourUserName>\.gitconfig`
 
-There's plenty of [git configs](https://git-scm.com/book/fr/v2/Personnalisation-de-Git-Configuration-de-Git), let's focus about two baisc ones : 
+There's plenty of [git configs](https://git-scm.com/book/fr/v2/Personnalisation-de-Git-Configuration-de-Git), let's focus about two basic ones : 
 
 - Setting up default user
 
-&rarr; Allowing you to define the Author displayed when you will create commits
+    &rarr; Allowing you to define the Author displayed when you will create commits
 
-```
-git config --global user.name <YourDisplayName> 
-git config --global user.email <YourEmail>
-```
+    ```
+    git config --global user.name <YourDisplayName> 
+    git config --global user.email <YourEmail>
+    ```
 
-:bulb: If you opened `Fork` after installing it, you may have seen a popup asking you to fill a name and email input, under the hood it basically run those commands
+    :bulb: If you opened `Fork` after installing it, you may have seen a popup asking you to fill a name and email input, under the hood it basically run those commands
 
 - Setting up default branch
 
-&rarr; Allowing you to define the default when you create a repository
+    &rarr; Allowing you to define the default when you create a repository
 
-```
-git config --global init.defaultBranch main
-```
+    ```
+    git config --global init.defaultBranch main
+    ```
 
-:bulb: Many Git provider (such as GitLab, GitHub, Azure Devops and so on), uses main as default branch.
+    :bulb: Many Git provider (such as GitLab, GitHub, Azure Devops and so on), uses main as default branch.
 
+<br/>
 
-> If you want to make a repository specific config, just replace `--global` option by `--local`. You can also use the command `git [--global | --local] --list` to list whether repository or global specific config without opening files.
+> __Note :__ If you want to make a repository specific config, just replace `--global` option by `--local`. You can also use the command `git [--global | --local] --list` to list whether repository or global specific config without opening files.
 
 ### objects folder
 
 This directory is responsible to store every Git objects as compressed files. 
 
-Each filename is object associated SHA-1 hash and its content is basically the z-lib compressed content.
+Each filename is named as the associated SHA-1 hash and its content is basically the z-lib compressed.
 
 For performance purposes all files are splitted into folders named with the two first SHA-1 hash characters, files under are therefore named with the last thirty-eight ones. It's a common technique called `sharding` or `partitionning`.
 
@@ -119,7 +120,7 @@ In Git, the terms `refs, heads, and branches` are **related but mean slightly di
 
 We could also talk about `tags` that are basically labels attached to a specific commit. We often use it to mark the code at a given time and associate a version like **v1.0.0** for instance.
 
-Therefore inside ./git/refs directory you'll find :
+Therefore inside **./git/refs** directory you'll find :
 
 ```
 .
@@ -169,7 +170,7 @@ flowchart TB
 - Changes cannot be persisted from Working Directory to Repository without being staged
 - Changes persisted in Repository can directly reset to Working directory
 - Differences can be computed using `git diff` command between two staging areas
-- `--soft`, `--mixed`, `--hard` are options allowed in many git commands and respectively points to Repository, Stage and Working Directory staging areas
+- `--soft`, `--mixed`, `--hard` are options allowed in many git commands and respectively points to Repository, Stage and Working Directory states
 
 ## From theory to practice 
 

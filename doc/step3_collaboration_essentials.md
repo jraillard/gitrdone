@@ -29,20 +29,20 @@ Now whether you use SSH (secure one) or HTTPS (default one) on your GitHub accou
 
 ![GH Get remote Git Repo url](../assets/gh_gitrepo_url.png)
 
-Come back to Fork and right click on **Remotes**, a dialog should opend :
+Come back to Fork and right click on **Remotes**, a dialog should open :
 - **Remote** indicate the label associated to the remote repository ; all branches that would stand in remote repository would be prefix by `remoteName/`
 
-&rarr; By convention it is labelled as `origin` or `<prefix>Origin` if we have multiple remote repository associated (see [forks section](#forks)).
+  :bulb: By convention it is labelled as `origin` or `<prefix>Origin` if we have multiple remote repository associated (see [forks section](#forks)).
 
-- **Repository URL** is where you should put the previously gathered URL.
+- **Repository URL** is where you should put the previously gathered URL
 - **Test connection** is a Fork GUI feature allowing us to see whether we have access to the remote repository locally
-- **Add New Remote** to add the remote repository reference &rarr; click on it
+- **Add New Remote** to add the remote repository reference &rarr; **Click on it**
     
     :bulb: Under the hood, what is done is basically run the command `git remote add origin <yourGitUrl>`. You can see it through the Fork GUI git commands history feature.
 
     ![Fork git commands history](../assets/fork_gitcmd_history.png)
 
-Well ... a new line appears under **Remotes** with GitHub Logo but nothing change on the repository commits graph :worried:
+Well ... a new line appears under **Remotes** with GitHub Logo but nothing change on the repository commits graph. :worried:
 
 Sure &rarr; The remote repository is empty for now; let's push our local one. :rocket:
 
@@ -64,13 +64,13 @@ Let's try to do the opposite now : doing a change on remote and sync our local e
 
 Go back to GitHub on the **Code section**, edit the `file.txt` file adding whatever you want in it and commit the changes.
 
-:warning: Commit directly to the main branch for this example, dont create a new branch.
+:warning: **Commit directly to the main branch for this example, dont create a new branch.**
 
 Now return on Fork, you don't see you new commit right ? We need to `fetch it first`.
 
 Click on the **Fetch button** on the left-top corner and select **Fetch** in the opened dialog.
 
-**origin/main** is ahead on your **main** branch. To make them sync you have two ways : 
+**origin/main** is now ahead of your **main** branch. To make them sync you have two ways : 
 - using the **Pull button** on the left-top corner 
   - that's the git command to run under the hook
   - :warning: be carefull of being checked out your local main branch
@@ -100,9 +100,10 @@ Now go on the **Code tab** and click on the blue **<> Code** button.
 Select whether HTTPS / SSH as you did previously and copy the URL.
 
 At this point you have two options : 
+
 :one: Clone the repo in the common way using git commands 
   
-  &rarr; Open a terminal in a folder where you want to clone the repo and run the command `git clone <remoteUrl>`
+  &rarr; Open a terminal in a folder where you want to clone the repo and run the command `git clone <remoteUrl>`.
 
 :two: Clone the repo using Fork GUI
   - On the left-top corner click on **File / Clone**
@@ -112,7 +113,7 @@ At this point you have two options :
   
     &rarr; By default it's the name of your repository 
 
-    :bulb: That's why repository naming advice to use only lowercase letters, hyphens and numbers
+    :bulb: **That's why repository naming convention advice to use only lowercase letters, hyphens and numbers.**
 
 Et voilà ! You're now able to whether initiate or clone a remote repository. :sparkles:
 
@@ -120,11 +121,11 @@ Et voilà ! You're now able to whether initiate or clone a remote repository. :s
 
 Previously we created branch and merge it into the main branch alone.
 
-In real-world we don't do this : default branch and some special branches (we'll see it [later on](./step5_branching_strategies.md)) are protected.
+In real-world we don't do this : default branch and some special branches (we'll see it [later on](./step5_branching_strategies.md)) should be protected.
 
 Meaning that we can't directly push changes to it, we must do a `pull request` (or `merge request`, both terms are used nowadays) containing our changes. Then when it's accepted, changes are merge to the targeted branch.
 
-Protect a branch and enforce those requests allows several things such as: 
+Protect a branch and enforce those requests allows several things such as : 
 - Many persons cannot edit the same branch at the same time
 - Some can review the changes before accepting it for merge
 - Additionnal treatments check could be done automatically (security, unit tests, linting, building artifacts, etc.)
@@ -141,17 +142,19 @@ Select **Rulesets** under the **Rules** dropdown list, click on the **New rulese
 
 &rarr; The core works is done on the third capture when we setted up both requiring pull request before merging and block force pushes (meaning we can't rewrite the targeted branch).
 
-:bulb: Options are here to ensure a **manual approval is required** and every** changes to the branch where we made a pull request on triggers a new approval checks**. Also **conversation**, the GitHub feature to make reviews on the code, **should always be resolved** before accepting a pull-request. **Allowed merge methods** is an option to tell how the repository graph (or history) should look like after pull-request resolve : we put **squash** in it ([others are also allowed](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github)). It's a common way of doing it as it result into a single commit for every changes included in a pull-request ; keeping the history clean in medium to large size project.
+:bulb: Options are here to ensure a **manual approval is required** and every **changes to the branch where we made a pull request on triggers a new approval checks**. Also **conversation**, the GitHub feature to make reviews on the code, **should always be resolved** before accepting a pull-request. **Allowed merge methods** is an option to tell how the repository graph (or history) should look like after pull-request resolve : we put **squash** in it ([others are also allowed](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github)). It's a common way of doing it as it result into a single commit for every changes included in a pull-request ; keeping the history clean in medium to large size project.
 
 Let's try then ! On your local machine :
 - Edit `README.md` for instance
 - Checkout main branch
 - Commit changes
 - Try to push ... :bomb:
-![Fork push on protected branch](../assets/fork_push_on_protected_branch.png)
-    &rarr; Error message is clear : you're violating repository rules and therefore are not allowed to push
 
-    :bulb: Not that if we didn't checked the option **Block force pushes** on Github Ruleset, we could have bypass this error message by checking **Force push** option on the Fork Push dialog.
+  ![Fork push on protected branch](../assets/fork_push_on_protected_branch.png)
+
+  &rarr; Error message is clear : you're violating repository rules and therefore are not allowed to push.
+
+  :bulb: Not that if we didn't checked the option **Block force pushes** on Github Ruleset, we could have bypass this error message by checking **Force push** option on the Fork Push dialog.
 
 Now do it properly by creating a branch called **feature/doc** on top of you main local branch ; so that it contains you're previous commit.
 
@@ -161,7 +164,7 @@ Push it to GitHub and create a Pull-Request on the **Code tab** by clicking on *
 
 Look through the Pull Request tabs : **Conversation, Commits, Checks, Files Changed**. They allows you to add global reviews or specific to one piece of code.
 
-> **TLDR :** On GitHub, for security concerns, even an owner isn't allowed to approve its own Pull-Request ; you should add other people to check your work. Therefore when you work alone on a repository, just skip the **Require a pull request before merging**. You can still keep branch protection and check for status check if you add CI-CD pipelines though (one subject of the [next course](https://github.com/jraillard/parkndeploy)).
+> **TLDR :** On GitHub, for security concerns, even an owner isn't allowed to approve its own Pull-Request ; you should add other people to check your work. Therefore when you work alone on a repository, just skip the **Require a pull request before merging** option. You can still keep branch protection and check for status check if you add CI-CD pipelines though (one subject of the [next course](https://github.com/jraillard/parkndeploy)).
 
 So update you're previously created ruleset to remove the mentionned option and after close the pull request. :broom:
 
@@ -171,9 +174,9 @@ On fork then delete **local main branch** and double click on the remote (in ord
 
 Little aside about what `Forks` are.
 
-It's being used on almost all **open source projects** and sometimes in big **companies**.
+It's being used on almost all **open source projects** and sometimes in **big companies**.
 
-A fork is a personal copy of someone else’s repository on a Git provider (GitHub for instance). It allows you to freely experiment and make changes without affecting the original project. You can later propose your changes back to the original repository via a pull request.
+A fork is a personal copy of someone else’s repository on a Git provider (GitHub for instance). It allows you to freely experiment and make changes without affecting the original project. You can later suggest your changes back to the original repository via a pull request.
 
 Optionnaly you can follow the official [Github Fork practice](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) in order to test this feature. :eyes:
 
@@ -185,17 +188,17 @@ Here's the **most important git feature**.
 
 Remember what we saw at first hand about **distributed version control** tool ?
 
-> **Conflict management is their main issue.** :bomb:
+> :bomb: **Conflict management is their main issue.** :bomb:
 
-Why is it ? Let's see with a sample : 
+Why is it ? Let's see it with a sample : 
 
-- create a branch **feature1**
-- add the following text at the end of **file.txt** : **The pen is red.**
-- create another branch **feature2**
-- add the following text at the end of **file.txt** : **The pen is blue.**
-- push both branches to origin
-- create a pull-request only from **feature1** to main and merge it
-- then create a pull-request from **feature2** to main and ... boom ! :bomb:
+- Create a branch **feature1**
+- Add the following text at the end of **file.txt** : **The pen is red.**
+- Create another branch **feature2**
+- Add the following text at the end of **file.txt** : **The pen is blue.**
+- Push both branches to origin
+- Create a pull-request only from **feature1** to main and merge it
+- Then create a pull-request from **feature2** to main and ... **boom !** :bomb:
 
     &rarr; Your gitgraph should now look like this : 
 
@@ -228,7 +231,7 @@ To solve this conflict management you'll have two ways :
 
 So practice it : **rebase** **feature1** on the last main branch commit and push it to origin.
 
-&rarr; Here a **conflict** banner should appear on top of Fork GUI, just click on `Resolve` to be redirected to the **Conflict management tab**.s
+&rarr; Here a **conflict** banner should appear on top of Fork GUI, just click on `Resolve` to be redirected to the **Conflict management tab**
 
 ![Fork rebase editor](../assets/fork_rebase_editor.png)
 

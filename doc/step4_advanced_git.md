@@ -12,7 +12,8 @@ These features help you manage complex scenarios and optimize your development p
 
 ### Cherry-pick
 
-The `git cherry-pick` command allows you to apply a specific commit from one branch onto another.  
+The `git cherry-pick` command allows you to apply a specific commit from one branch onto another. 
+
 This is useful when you want to selectively incorporate changes without merging entire branches.
 
 In the following situation, we're **cherry-picking** content from **commit B2 from the feature branch** into the **main branch** witout merging the **feature branch**.
@@ -38,31 +39,31 @@ Here's an example :
 
 ![Fork stash sample](../assets/fork_stash_sample.png)
 
-:zero: Made some changes on file.txt while being checked out on main branch. The product owner, at this time, called me to switch on a brandly new feature.
+:zero: Made some changes on file.txt while being checked out on main branch. The product owner, at this time, called you to switch on a brandly new feature.
 
-:one: My changes were minor so creating a stash, with the **Stash button** on left-top corner, would be enough (no need to create a temporary branch).
+:one: Current changes were minor so creating a stash, with the **Stash button** on left-top corner, would be enough (no need to create a temporary branch).
 
 :two: The stash appears on the left side under **Stashes** accordion.
 
 :three: The stash appears also in the gitgraph, with main as parent commit.
 
-:four: I can now freely develop my feature, the PO is happy :smiley:
+:four: You can now freely develop my feature, the PO is happy :smiley:
 
-&rarr; After this I would be able to re-apply changes contained inside the stash by checking out a commit (wherever I want to apply the stash content), right-clicking on the stash and select **Apply** in the context menu.
+&rarr; After this you would be able to re-apply changes contained inside the stash by checking out a commit (wherever you want to apply the stash content), right-clicking on the stash and select **Apply** in the context menu.
 
 :bulb: Fork also gives you the possibility to automatically destroy the stash after or not.
 
 ### Interactive rebase
 
-`Interactive rebase` (git rebase -i) lets you rewrite commit history: reorder, squash, edit, or drop commits to keep a clean and meaningful history.
+`Interactive rebase` (**git rebase -i** command) lets you rewrite commit history : reorder, squash, edit, fixup or drop commits to keep a clean and meaningful history.
 
 &rarr; For sure it is an **awesome** tool as you could clean a branch at anytime.
 
-:warning: ***Great powers comes with great responsabilities*** :eyes: better use this feature on your own branches, be sure to not break others ...
+:warning: ***Great powers comes with great responsabilities***. :eyes: Better use this feature on your own branches, be sure to not break others ...
 
-&rarr; As an example rework the feature branch in the [stash topic](#stash) so that it contains only one commit named **feat(work) : whatever the po wants**. The commit should contains changes from every commits before(**do**, **whatever**, **the product owner** and **want** ).
+&rarr; As an example, rework the feature branch in the [stash topic](#stash) so that it contains only one commit named **feat(work) : whatever the po wants**. The commit should contains changes from every commits before (**do**, **whatever**, **the product owner** and **want** ).
 
-> In order to do an interactive rebase on Fork, basically right-click **on the commit before the branch you want to rebase** and play with the context menu. :smirk:
+> :bulb: In order to do an interactive rebase on Fork, basically right-click **on the commit before the branch you want to rebase** and play with the context menu. :smirk:
 
 You should end up with this :
 
@@ -70,15 +71,15 @@ You should end up with this :
 
 ## Advanced features
 
-This parts aims to give you some resources and knowledges about advanced features that you might face. If you want to dive deeper in it, follow the links provided.
+This parts aims to give you some resources and knowledges about advanced features that you might face or need. If you want to dive deeper in it, follow the links provided.
 
 ### Git hooks
 
-`Git hooks` are custom scripts, with whatever language you want, that run automatically on certain Git events (e.g., commit, push, rebase, etc.). They help enforce policies, automate tasks, or integrate with other tools. For example a pre-commit hook to run tests or linters before committing.
+`Git hooks` are custom scripts, written in any language you want, that runs automatically on certain **Git events** (e.g., commit, push, rebase, etc.). They help enforce policies, automate tasks, or integrate with other tools. For example a pre-commit hook to run tests or linters before committing.
 
 Remember the `./git/hooks` we mentionned earlier in this course ? That's where the magic stand. :eyes:
 
-&rarr; You just have to create a file named with the git event targeted, pre-commit for instance, add a script to execute in it, et voilà !
+&rarr; You just have to **create a file named with the git event targeted**, pre-commit for instance, add a script to execute in it, et voilà !
 
 :warning: Two important things to know though : 
 - Git hooks might not work if you're on windows for [several fixable reasons](https://kaylumah.medium.com/using-c-code-in-your-git-hooks-66e507c01a0f)

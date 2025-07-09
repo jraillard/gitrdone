@@ -4,39 +4,40 @@ This part aim to describe some technical terms to better get into the purpose of
 
 ## Common language breakdown
 
-First thing to know : `Git is only a version control tool`.
+> :bulb: First thing to know : `Git is only a version control tool`.
 
 Many tools and methodologies have been created throughout the years to handle this IT development aspect (BitKeeper, SVN, CVS, etc.).
 
 `Git` is the standard tool nowadays that's why we more often use this term instead of `version control` or `code source control`.
 
-Second thing : `version control is not always about code base`. We can use Git and other alternatives to version documentation or even binary files. Version control isn't bound to IT development but as it allows us to easily version text files, it's an awesome tool for us.
+> :bulb: Second thing : `version control is not always about code base`. 
+
+We can use Git and other alternatives to version documentation or even binary files (with limitations). Version control isn't bound to IT development but as it allows us to easily version text files, it's an awesome tool for us.
 
 ## Version control objectives
 
 As the name implies, version control allows developpers to do `file versionning` (instead of having multiples different copies of it :dizzy_face:).
 
-Gains are : 
+Non-exhaustive gains list is:  
 - Only one source of truth at a time (e.g. one file)
 - Enabling collaboration
 - Encouraging consistency (branching / commit strategy)
 - Allowing work history and immutability
 - Integrating CI-CD pipelines
-- etc.
 
 ## Version control types
 
-There two major version control types : `centralized` and `distributed`.
+There are two major version control types : `centralized` and `distributed`.
 
 ### Centralized
 
 ![Centralized version control](../assets/centralized_vc.png)
 
-As the name implies, it consist of having only one repository where every developpers can interact with simulatenously.
+As the name implies, it consist of having only one repository where every developpers can interact with simultaneously.
 
 The main issue with this method is that everytime a developper would work with one or many files, he **locks** it so that it avoids conflict with other developpers.
 
-Therefore two developpers cannot work at the same time on a single file : that really unfortunate in almost all projects. :confused:
+Therefore two developpers cannot work at the same time on a single file : that's really unfortunate in almost all projects. :confused:
 
 ### Distributed
 

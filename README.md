@@ -2,26 +2,26 @@
 
 `GitRDone` is a hands-on course to get you up to speed with version control using Git — the essential step before jumping into [DevOps initiation course](https://github.com/jraillard/parkndeploy).
 
-Learn the fundamentals : what version control is, how Git works (commits, branches, merges), collaboration workflows, and key advanced commands.
+Learn the fundamentals : what version control is, how Git works (commits, branches, merges), collaboration workflows, finishing with key advanced commands and features.
 
-Master Git basics and branching strategies to smoothly transition into DevOps practices.
+Master Git basics, branching strategies and embrace naming conventions to smoothly transition into DevOps practices.
 
-:bulb: This course favors practicing with a Git GUI over command line. Using a GUI better visualizes Git concepts and makes it easier for beginners to grasp version control in action.
+:bulb: This course favors practicing with a Git GUI over command line. Using a GUI will helps you better visualizes Git concepts and makes it easier for beginners to grasp version control in action.
 
-Let’s **Git done right** and get ready for what’s next! 🚀
+Let’s **Git done right** and get ready for what’s next ! 🚀
 
 # Prerequisites
 
 ## Tools
 
-- [Git](https://git-scm.com/downloads) obviously
+- [Git](https://git-scm.com/downloads) (obviously)
 - [Fork](https://git-fork.com/) - The best Git GUI ever made
-- A GitHub account in order to fork this repo and start to work 😉
-- [Visual Studio Code](https://code.visualstudio.com/download) - Our IDE for this course
+- A [GitHub account](https://github.com/login)
+- **[Optionnally]** [Visual Studio Code](https://code.visualstudio.com/download) - for text editing
 
 ## Knowledges
 
-Basic IT development knownledges would be appreciated but that's it.
+Basic IT development knownledges would be appreciated but not mandatory.
 
 Version control is heart of the computer scienctist's work and therefore could be learned early.
 
@@ -29,12 +29,10 @@ Version control is heart of the computer scienctist's work and therefore could b
 
 Version control is the barebone of IT development. Start by understanding why it’s essential and how Git works under the hood.
 
-Jump right into the [first step](./doc/step0_what_is_version_control.md).
-
-Step-by-step, you’ll master Git basics to Git done right and be ready for DevOps.
+Jump right into the [first step](./doc/step0_what_is_version_control.md). :rocket:
 
 # Additionnal resources
 
-First of all, I hope this initiation would help you understand how to use version control in your day-to-day work.
+First of all, I hope this initiation helped you understand how to use version control in your day-to-day work.
 
-Now for a treasure trove of additional resources to dive deeper into DevOps concepts, check out the [to go further section](./doc/to_go_further.md). 👀
+Now for a treasure trove of additional resources to dive deeper into Git concepts, check out the [to go further section](./doc/to_go_further.md). 👀

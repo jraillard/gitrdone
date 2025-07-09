@@ -84,9 +84,9 @@ There are **typically no long-lived release branches**. Instead, code is continu
 
 To **manage incomplete features without blocking releases**, developers commonly use **feature flags (or feature toggles)**. This allows new code to be merged early but hidden or disabled in production until it's ready to be released.
 
-When ready, the current trunk commit is tagged as a release (e.g., v1.2.0). Hotfixes are typically done by fixing directly on trunk and releasing immediately.
+When ready, the current trunk commit is tagged as a release (e.g. v1.2.0). Hotfixes are typically done by fixing directly on trunk and releasing immediately.
 
-> :bulb: **Note  :** a trunk isnt necessarily the main branch. For instance if you need to support multiple release version at the same time you could consider creating multiples **rel/*** branches (**trunks**) and add tag them. You then just have to report changes to the main branch and later releases branches.
+> :bulb: **Note  :** a trunk isn't necessarily the main branch. For instance if you need to support multiple release version at the same time you could consider creating multiples **rel/*** branches (**trunks**) and add tag them. You then just have to report changes to the main branch and later releases branches.
 
 ```mermaid
 gitGraph
@@ -142,13 +142,14 @@ You can read more about on the [official doc](https://semver.org/spec/v2.0.0.htm
 
 ### Commit naming
 
-Commit naming is often a total jungle. You probably already saw that, you did that, I did too.
+Commit naming is often completely chaotic. You’ve probably seen it, you’ve probably done it, and honestly, so have I.
 
 It is not a problem in small to medium project. It's getting worse on bigger one when you need to travel around repository trying to understand what have been done, why a commit "mysteriously disappeared" and so on.
 
 The one I would recommend you to use is `Conventionnal Commits`.
 
-To quote it `Conventionnal Commits dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.`
+To quote it :
+> ***Conventionnal Commits dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.***
 
 There's no better explanation than the official one so if you are inclined to change, check out the [doc](https://www.conventionalcommits.org/en/v1.0.0/#specification).
 

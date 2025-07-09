@@ -1,7 +1,7 @@
 # Further Learning Resources
 Did you fall in love with Version Control in this course or just want go deeper ? 👀
 
-The following ressources might fit your needs as they cover all the DevOps concepts 😁
+The following ressources might fit your needs as they cover almost all its concepts. 😁
 
 :arrow_forward: [John Savill's Mastering Git](https://www.youtube.com/watch?v=hQJktcBzJUs)
 

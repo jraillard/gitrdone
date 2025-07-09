@@ -18,10 +18,13 @@ When you create a repository no changes are in there or even already persisted, 
 
 So let's create our first one : 
 - Create a file named `file.txt` in your repository root and write "my file" inside
-- Go back to fork and observe that changes have been detected : ![Changes notification in fork](../assets/fork_changes_notif.png)
+- Go back to fork and observe that changes have been detected : 
+  
+  ![Changes notification in fork](../assets/fork_changes_notif.png)
+
 - Click on **Local changes** tab, you should be redirected to a page where you can observe all staging areas we mentioned earlier
 ![Changes tab in fork](../assets/fork_changes_tab.png)
-    - To persist from Working Directory to Stage &rarr; basically select files and clic on **Stage** (:bulb: if we add multiple lines and mades changes in few ones we might also be able to select changes inside files instead of the entire file)
+    - To persist from Working Directory to Stage &rarr; Basically select files and click on **Stage** (:bulb: if we add multiple lines and mades changes in few ones we might also be able to select changes inside files instead of the entire file)
     - To persist from Stage to Repository &rarr; Basically Add a **commit subject** and optionnaly a description (that will be part of commit metadatas) and click on **Commit**
 - Come back to **All commits** tab and you should see you're first commit
 ![First commit in Fork](../assets/fork_first_commit_created.png)
@@ -33,15 +36,15 @@ Let's say you're on a project you have two given tasks :
 - add a file containing the french pancake recipe
 - add a README file to provide documentation about this repository
 
-You might be tempted to add all of this in a single commit ; but you won't. :eyes:
+You might be tempted to add all of this in a single commit ; **but you won't**. :eyes:
 
 > **Commits should be atomic**, meaning they should focus about one thing (feature, fix, etc.).
 
-Ok then, I'll create the french pancake recip file in a first commit and add the README file in a second on ; is that ok ?
+Ok then, I'll create the french pancake recipe file in a first commit and add the README file in a second on ; is that ok ? :no_mouth:
 
 &rarr; That's better but there's another approach : using `branches` :bulb:
 
-> **Git branches** allows us to isolate changes in a commit chain. Few points / rules to know about branches
+> **Git branches** allows us to isolate changes in a commit chain. Few points / rules to know about branches :
 > - a branch is a label of its first commit
 > - branches should be as atomic as possible
 > - a branch is created from another (despite the default one)
@@ -52,7 +55,7 @@ Ok then, I'll create the french pancake recip file in a first commit and add the
 Let's practice then, starting with adding french pancake recipe : 
 - Create a file `french_pancake_recipe.txt` at the repository root folder
 - Look for the recipe and add it in
-- Go on fork to create our first branch
+- Go on Fork to create our first branch
   
   &rarr; You should see your changes on **Local changes tab** but stay on **All commits tab**
 
@@ -67,11 +70,11 @@ Let's practice then, starting with adding french pancake recipe :
   
     ![First branch](../assets/fork_first_branch.png)
 
-Perfect, let this branch here for now and jump to the second task : create a README file 
+Perfect, let this branch here for now and jump to the second task : create a README file.
 
 - Go back to the main branch by basically double click on it 
 
-    &rarr; under the hood, it's equivalent to make a `git checkout` : changing the current commit HEAD
+    &rarr; Under the hood, it's equivalent to make a `git checkout` : changing the current commit HEAD.
 
 - Create a branch named **documentation**
 - Add a markdowwn file `README.md` at the repository root folder
@@ -89,7 +92,7 @@ This repository aim to initiate into git concepts.
 - Commit the changes
 - Open the README file using the [Markdown Preview in VSCode](https://code.visualstudio.com/docs/languages/markdown) 
 
-&rarr; Gosh we mentionned the french pancake recipe but this file is contained in another branch so our link is broken :grimacing:
+&rarr; Gosh we mentionned the french pancake recipe but this file is contained in another branch so our link is broken. :grimacing:
 
 :bulb: Let's **rebase** it ! 
 
@@ -99,9 +102,9 @@ Follow the steps :
 - Come back to the **All commits tab**
 - Make sure you're checked out the **documentation** branch (the one with the :heavy_check_mark: mark)
 - Right click on the branch you want to rebase on : **add-french-pancake-recipe**
-- Here you have two options **merge** and **rebase**
+- Here you have two options **merge** or **rebase**
 
-Let's step out a bit and explain what the difference with schemas :
+Let's step out a bit and explain what's the difference with schemas :
 - `merging` : Combine the changes from a branch to another while preserving the divergent branches and histories.
     - before merge
         ```mermaid
@@ -124,7 +127,7 @@ Let's step out a bit and explain what the difference with schemas :
             commit id: "CommitD"
             merge feature         
         ```
-&rarr; The combined commit is called a `merge commit`
+&rarr; The combined commit is called a `merge commit`.
 
 - `rebasing` : Mooving commits from the rebased branch on top of the commits from the target, rewriting rebased branch history so that it looks the rebased branch was created on latest target branch commit.
 
@@ -151,7 +154,7 @@ Let's step out a bit and explain what the difference with schemas :
 
 &rarr; We could then, after a rebase, merge our **feature** branch into **main** so that the default branch have all functionnalities gathered.
 
-:bulb: One thing to notice : if your branch have a lot of commits , **git rebase will try apply all commits one by one to check differences / conflicts** whereas **git merge will compute changes only once in order to create the merge commit**
+:bulb: One thing to notice : if your branch have a lot of commits , **git rebase will try apply all commits one by one to check differences / conflicts** whereas **git merge will compute changes only once in order to create the merge commit**.
 
 End of talking, let's practice :rocket:
 
@@ -169,13 +172,15 @@ End of talking, let's practice :rocket:
 
 :five: Now Merge **documentation** into **main**
 
-:six: Finally drop the previous branches as we no longer need it. They have been merged into the default branch, our tasks are ended
+:six: Finally drop the previous branches as we no longer need it. They have been merged into the default branch, our tasks are ended.
 
 ![Fork delete branches](../assets/fork_delete_branches.png)
 
-Et voilà ! Our tasks have been now merged into default branch.
+Et voilà ! Our tasks have been now merged into default branch. :sparkles:
 
-:bulb: Keep in mind, branches allows us to split our tasks into unit of works. Commits are here to isolate small chunks of changes.
+> :bulb: Keep in mind :
+> - **Branches allows us to split our tasks into unit of works**.
+> - **Commits are here to isolate small chunks of changes**.
 
 ## Work in team
 
