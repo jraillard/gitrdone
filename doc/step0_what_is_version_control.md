@@ -17,7 +17,7 @@ Second thing : `version control is not always about code base`. We can use Git a
 As the name implies, version control allows developpers to do `file versionning` (instead of having multiples different copies of it :dizzy_face:).
 
 Gains are : 
-- Only one source of truth at a time (ie one file)
+- Only one source of truth at a time (e.g. one file)
 - Enabling collaboration
 - Encouraging consistency (branching / commit strategy)
 - Allowing work history and immutability

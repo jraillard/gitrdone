@@ -59,7 +59,7 @@ Let's practice then, starting with adding french pancake recipe :
 - Right click on the highlighted commit (the current HEAD)
 - On the context menu, select **New Branch** and enter a branch name for instance **add-french-pancake-recipe**
   
-  :bulb: Notice that now your brandly new branch has the :heavy_check_mark: mark , meaning it's the `checkout branch` (ie the current one)
+  :bulb: Notice that now your brandly new branch has the :heavy_check_mark: mark , meaning it's the `checkout branch` (e.g. the current one)
 
 - Now go on **Local changes tab** and create a commit with the changes as we did previously
 
