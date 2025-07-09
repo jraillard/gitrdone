@@ -42,7 +42,7 @@ We can sum git behavior in few points :
 
 Below is a schematic representation illustrating these concepts :
 
-![Git internals schema](../assets/git_internals.png)
+![Git internals scheme](../assets/git_internals.png)
 
 ## .git directory
 
