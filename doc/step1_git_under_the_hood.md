@@ -32,13 +32,15 @@ We can sum git behavior in few points :
 
 :two: Each **directory are stored as a tree object** listing filenames, type (file or directory)
 
-:three: A **commit object points to the root tree object**, and therefore the repository content, at a given time. 
+:three: A **commit object stores edits in each modified files**
 
-:four: A **commit can have a parent except the initial one**.
+:four: A **commit object also points to the root tree object** , and therefore the repository content, at a given time. 
 
-:five: A **commit also store additionnal metadatas such as description or author**
+:five: A **commit can have a parent except the initial one**.
 
-:six: Git **associate a SHA-1 hash to each object** to ensure their integrity
+:six: A **commit also store additionnal metadatas such as description or author**
+
+:seven: Git **associate a SHA-1 hash to each object** to ensure their integrity
 
 Below is a schematic representation illustrating these concepts :
 
